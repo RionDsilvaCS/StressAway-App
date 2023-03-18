@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mainName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="24dp"
+                android:text="Hi, Rion"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/raleway_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/journalButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Journal"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bookButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Books"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/musicButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Music"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/movieButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Movies"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/dietButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Diet"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/yogaButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_3"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Yoga"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/locationButton"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/home_block_4"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="24dp"
+                            android:text="Location"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

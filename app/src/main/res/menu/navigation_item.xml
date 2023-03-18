@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+        <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home_icon"
+            android:title="Home"
+            />
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profile_icon_nav"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/mentorChat"
+            android:icon="@drawable/chat_icon"
+            android:title="Mentor Chat"/>
+
+        <item
+            android:id="@+id/mentorDetails"
+            android:icon="@drawable/details_icon"
+            android:title="Mentor Details"/>
+
+        <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/about_icon"
+            android:title="About us"/>
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings_icon"
+            android:title="Settings"/>
+
+        </group>
+</menu>
