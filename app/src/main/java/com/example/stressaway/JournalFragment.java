@@ -4,33 +4,29 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
+public class JournalFragment extends Fragment {
 
-public class HomeFragment extends Fragment {
-
-    private OnFragmentInteractionListener mListener;
+    private HomeFragment.OnFragmentInteractionListener mListener;
     private static final String ARG_PARAM1 = "param1";
-
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public JournalFragment() {
         // Required empty public constructor
     }
 
 
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static JournalFragment newInstance(String param1, String param2) {
+        JournalFragment fragment = new JournalFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -51,11 +47,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void messageFromParentFragment(Uri uri);
+        return inflater.inflate(R.layout.fragment_journal, container, false);
     }
 
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void messageFromChildFragment(Uri uri);
+    }
 }

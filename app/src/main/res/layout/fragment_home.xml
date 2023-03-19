@@ -230,5 +230,12 @@
 
         </RelativeLayout>
     </ScrollView>
+    <FrameLayout
+        android:id="@+id/child_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
 
 </FrameLayout>
