@@ -20,10 +20,9 @@ import android.widget.Toast;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener, JournalFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements HomeFragment.OnFragmentInteractionListener{
 
-    ImageView journal, books, music, movie, diet, yoga, location;
-    String fragmentSwitch ="nul";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,17 +72,6 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
             }
         });
 
-
-        switch (fragmentSwitch){
-
-            case "journal":
-                replaceFragment(new JournalFragment());
-                break;
-            default:
-
-        }
-
-
     }
 
     private void replaceFragment(Fragment fragment){
@@ -101,11 +89,5 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     }
 
 
-    public void messageFromChildFragment(Uri uri) {
-        Log.i("TAG", "received communication from child fragment");
-    }
 
-    public void onInputHomeSent(CharSequence input){
-
-    }
 }

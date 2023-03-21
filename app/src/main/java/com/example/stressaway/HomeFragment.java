@@ -18,35 +18,16 @@ import android.widget.RelativeLayout;
 
 public class HomeFragment extends Fragment {
 
-    private OnFragmentInteractionListener mListener;
-    private static final String ARG_PARAM1 = "param1";
-
-    private static final String ARG_PARAM2 = "param2";
-
-    private FragmentOnAttachListener listener;
-
-
-    private String mParam1;
-    private String mParam2;
-
-
     ImageView journal, books, music, movie, diet, yoga, location;
-
 
     public HomeFragment() {
         super(R.layout.fragment_home);
 
     }
 
-    public interface FragmentOnAttachListener{
-        void onInputHomeSent(CharSequence input);
-    }
-
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,14 +36,6 @@ public class HomeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -71,13 +44,61 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         journal = view.findViewById(R.id.journalButton);
+        books = view.findViewById(R.id.bookButton);
+        music = view.findViewById(R.id.musicButton);
+        movie = view.findViewById(R.id.movieButton);
+        diet = view.findViewById(R.id.dietButton);
+        yoga = view.findViewById(R.id.yogaButton);
+        location = view.findViewById(R.id.locationButton);
+
+
         journal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CharSequence input = "journal";
-                listener.onInputHomeSent(input);
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), JournalActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        books.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // books intent
+            }
+        });
+
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // music intent
+            }
+        });
+
+        movie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // movie intent
+            }
+        });
+
+        diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // diet intent
+            }
+        });
+
+        yoga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // yoga intent
+            }
+        });
+
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // location intent
             }
         });
 

@@ -39,9 +39,9 @@
 
                     <RelativeLayout
 
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="20dp">
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="15dp">
                         <ImageView
                             android:id="@+id/journalButton"
                             android:layout_width="match_parent"
@@ -62,11 +62,12 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/bookButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_margin="20dp">
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_margin="15dp">
                         <ImageView
+                            android:id="@+id/bookButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_1"/>
@@ -94,11 +95,12 @@
                     android:layout_gravity="center">
 
                     <RelativeLayout
-                        android:id="@+id/musicButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
                         android:layout_margin="20dp">
                         <ImageView
+                            android:id="@+id/musicButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_2"/>
@@ -117,11 +119,12 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/movieButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
                         android:layout_margin="20dp">
                         <ImageView
+                            android:id="@+id/movieButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_2"/>
@@ -139,6 +142,11 @@
                             android:textColor="@color/black"/>
                     </RelativeLayout>
 
+                    <FrameLayout
+                        android:id="@+id/child_fragment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></FrameLayout>
+
 
                 </LinearLayout>
 
@@ -149,11 +157,12 @@
                     android:layout_gravity="center">
 
                     <RelativeLayout
-                        android:id="@+id/dietButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
                         android:layout_margin="20dp">
                         <ImageView
+                            android:id="@+id/dietButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_3"/>
@@ -172,11 +181,12 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/yogaButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
                         android:layout_margin="20dp">
                         <ImageView
+                            android:id="@+id/yogaButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_3"/>
@@ -203,11 +213,12 @@
                     android:layout_gravity="center">
 
                     <RelativeLayout
-                        android:id="@+id/locationButton"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
                         android:layout_margin="20dp">
                         <ImageView
+                            android:id="@+id/locationButton"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/home_block_4"/>
@@ -231,11 +242,6 @@
 
         </RelativeLayout>
     </ScrollView>
-    <FrameLayout
-        android:id="@+id/child_fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
 
 
 </FrameLayout>
