@@ -4,18 +4,19 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
-public class JournalFragment extends Fragment {
+public class JournalFragment extends Fragment  {
 
     private HomeFragment.OnFragmentInteractionListener mListener;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
 
     private String mParam1;
     private String mParam2;
@@ -54,4 +55,7 @@ public class JournalFragment extends Fragment {
         // TODO: Update argument type and name
         void messageFromChildFragment(Uri uri);
     }
+
+
+
 }
