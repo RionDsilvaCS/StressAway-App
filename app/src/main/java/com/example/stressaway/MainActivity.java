@@ -63,8 +63,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         Toast.makeText(MainActivity.this,"About us",Toast.LENGTH_SHORT).show();
 
                     case R.id.settings:
-                        Toast.makeText(MainActivity.this,"Settings",Toast.LENGTH_SHORT).show();
-
+                        replaceFragment(new SecurityFragment());
                     default:
                         return true;
                 }
