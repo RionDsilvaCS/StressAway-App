@@ -24,24 +24,26 @@
 
         <LinearLayout
             android:id="@+id/profile_frame"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="32dp"
-            >
+            android:layout_marginEnd="150dp">
 
             <ImageView
                 android:id="@+id/profile_pic"
                 android:layout_width="112dp"
                 android:layout_height="112dp"
                 android:layout_weight="1"
-                tools:src="@drawable/sample_profile_pic" />
+                android:src="@drawable/sample_profile_pic" />
 
         </LinearLayout>
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/profile_frame"
@@ -57,9 +59,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            android:layout_marginTop="36dp"
+            android:layout_below="@+id/student_name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="30dp"
             android:orientation="vertical">
 
@@ -67,13 +71,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@drawable/person_icon" />
+                    android:src="@drawable/person_icon" />
 
                 <TextView
                     android:id="@+id/account"
@@ -91,42 +95,41 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:src="@drawable/right_arrow_settings" />
+                    android:src="@drawable/right_arrow_settings" />
 
 
             </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:src="@drawable/security_icon" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/pandp"
-                android:layout_width="290dp"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/profile_frame"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/raleway"
-                android:text="Privacy and Security"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/security_icon" />
 
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                tools:src="@drawable/right_arrow_settings" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/pandp"
+                    android:layout_width="290dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/profile_frame"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/raleway"
+                    android:text="Privacy and Security"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
 
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/right_arrow_settings" />
+            </LinearLayout>
 
 
         </LinearLayout>

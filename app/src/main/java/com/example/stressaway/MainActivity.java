@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-
+        replaceFragment(new HomeFragment());
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -54,16 +54,18 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         Toast.makeText(MainActivity.this,"Profile",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.mentorChat:
-                        Toast.makeText(MainActivity.this,"Chat",Toast.LENGTH_SHORT).show();
-
+                        Intent intent = new Intent(getApplicationContext(), MentorChatActivity.class);
+                        startActivity(intent);
+                        break;
                     case R.id.mentorDetails:
-                        Toast.makeText(MainActivity.this,"Details",Toast.LENGTH_SHORT).show();
-
+                        replaceFragment(new MentorDetailsFragment());
+                        break;
                     case R.id.aboutUs:
                         Toast.makeText(MainActivity.this,"About us",Toast.LENGTH_SHORT).show();
-
+                        break;
                     case R.id.settings:
                         replaceFragment(new SecurityFragment());
+                        break;
                     default:
                         return true;
                 }
