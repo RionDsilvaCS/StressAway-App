@@ -8,7 +8,7 @@
     <EditText
         android:id="@+id/journal_text"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
@@ -47,7 +47,7 @@
         />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/previous_journal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/save_journal_button"
@@ -55,21 +55,10 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/raleway_bold"
-        android:text="Previous Journals"
-        android:textColor="@color/black"
-        android:textSize="24dp" />
-
-    <GridView
-        android:id="@+id/previewJournal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:numColumns="2" />
+        android:text="@string/previous_journal"
+        android:textColor="#63CCAB"
+        android:textSize="24dp"
+        />
 
     <TextView
         android:id="@+id/textView"

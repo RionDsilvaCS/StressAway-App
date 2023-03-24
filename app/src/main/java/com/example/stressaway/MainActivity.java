@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         replaceFragment(new HomeFragment());
                         break;
                     case R.id.profile:
-                        Toast.makeText(MainActivity.this,"Profile",Toast.LENGTH_SHORT).show();
+                        replaceFragment(new ProfileFragment());
                         break;
                     case R.id.mentorChat:
                         Intent intent = new Intent(getApplicationContext(), MentorChatActivity.class);
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         replaceFragment(new MentorDetailsFragment());
                         break;
                     case R.id.aboutUs:
-                        Toast.makeText(MainActivity.this,"About us",Toast.LENGTH_SHORT).show();
+                        replaceFragment(new AboutUsFragment());
                         break;
                     case R.id.settings:
                         replaceFragment(new SecurityFragment());
