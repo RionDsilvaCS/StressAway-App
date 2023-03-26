@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/back_arrow_top" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -29,11 +29,32 @@
         android:textColor="@color/black"
         android:textSize="24dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/journalHistory"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/raleway"
+        android:text="Refresh to view latest"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/journalHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

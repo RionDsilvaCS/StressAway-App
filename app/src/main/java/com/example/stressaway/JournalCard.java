@@ -1,11 +1,12 @@
 package com.example.stressaway;
 
 public class JournalCard {
-    private String content, date;
+    private String content, date, id;
 
-    public JournalCard(String content, String date) {
+    public JournalCard(String content, String date, String id) {
         this.content = content;
         this.date = date;
+        this.id = id;
     }
 
     public String getContent() {
@@ -18,6 +19,10 @@ public class JournalCard {
 
     public String getDate() {
         return date;
+    }
+
+    public String getId(){
+        return id;
     }
 
     public void setDate(String date) {

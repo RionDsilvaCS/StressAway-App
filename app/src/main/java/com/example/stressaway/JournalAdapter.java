@@ -21,7 +21,6 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.viewHold
     public JournalAdapter(Context context, ArrayList<JournalCard> JournalCardArrayList) {
         this.context = context;
         this.JournalCardArrayList = JournalCardArrayList;
-
     }
 
     @NonNull
