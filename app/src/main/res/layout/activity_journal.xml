@@ -44,6 +44,7 @@
         android:text="Save it!"
         android:textAllCaps="false"
         android:textSize="20dp"
+        android:textAlignment="center"
         />
 
     <TextView

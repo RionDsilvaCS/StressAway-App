@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 public class HomeFragment extends Fragment {
@@ -41,7 +42,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         journal = view.findViewById(R.id.journalButton);
         books = view.findViewById(R.id.bookButton);
@@ -50,7 +51,7 @@ public class HomeFragment extends Fragment {
         diet = view.findViewById(R.id.dietButton);
         yoga = view.findViewById(R.id.yogaButton);
         location = view.findViewById(R.id.locationButton);
-
+        Toast addSoonToast = Toast.makeText(getActivity(),"Feature will be added soon", Toast.LENGTH_SHORT);
 
         journal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +65,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // books intent
+                addSoonToast.show();
             }
         });
 
@@ -71,6 +73,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // music intent
+                addSoonToast.show();
             }
         });
 
@@ -78,6 +81,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // movie intent
+                addSoonToast.show();
             }
         });
 
@@ -85,6 +89,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // diet intent
+                addSoonToast.show();
             }
         });
 
@@ -92,6 +97,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // yoga intent
+                addSoonToast.show();
             }
         });
 
@@ -99,6 +105,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // location intent
+                addSoonToast.show();
             }
         });
 
@@ -106,7 +113,7 @@ public class HomeFragment extends Fragment {
 
     }
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
+
         void messageFromParentFragment(Uri uri);
     }
 
