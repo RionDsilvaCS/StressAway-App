@@ -56,7 +56,7 @@
             android:layout_below="@+id/imageView3"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/raleway_bold"
-            android:text="Dr. Vivek Kumar"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:textAlignment="center"/>
@@ -87,7 +87,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="70532"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -117,7 +117,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="School of Advanced Sciences"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -148,7 +148,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="AB2-1st Floor/124-M"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -178,7 +178,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="Department of Mathematics"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 

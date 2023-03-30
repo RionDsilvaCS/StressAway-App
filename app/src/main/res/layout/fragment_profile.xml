@@ -37,7 +37,7 @@
                     android:id="@+id/profile_pic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/profile_pic_icon" />
+                    android:src="@drawable/header_profile_button" />
 
 
             </LinearLayout>
@@ -49,13 +49,13 @@
 
 
         <TextView
-            android:id="@+id/mentor_name"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView3"
             android:layout_marginTop="12dp"
             android:fontFamily="@font/raleway_bold"
-            android:text="Rion Dsilva"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:textAlignment="center"/>
@@ -64,7 +64,7 @@
             android:id="@+id/journal_icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mentor_name"
+            android:layout_below="@+id/name"
             android:layout_marginTop="20dp"
             android:src="@drawable/journal_icon" />
 
@@ -79,7 +79,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="20"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textAlignment="center"/>
@@ -88,7 +88,7 @@
             android:id="@+id/t1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mentor_name"
+            android:layout_below="@+id/name"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="30dp"
@@ -100,7 +100,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/faculty_id"
+            android:id="@+id/app_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t1"
@@ -110,7 +110,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="2021118193"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -130,7 +130,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/school_def"
+            android:id="@+id/reg_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t2"
@@ -140,7 +140,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="21BCE8083"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -161,7 +161,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/cabin_no"
+            android:id="@+id/mail_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t3"
@@ -171,7 +171,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="rion.21bce8083@vitapstudent.ac.in"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -191,7 +191,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/department_def"
+            android:id="@+id/school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t4"
@@ -201,7 +201,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/poppins"
-            android:text="School of Computer Science and Engineering"
+            android:text="-"
             android:textColor="@color/black"
             android:textSize="18dp" />
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JournalActivity">
+
     <EditText
         android:id="@+id/journal_text"
         android:layout_width="match_parent"
@@ -97,6 +98,5 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="36dp"
         app:srcCompat="@drawable/back_arrow_top" />
-
 
 </RelativeLayout>

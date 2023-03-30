@@ -17,12 +17,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.WriteBatch;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -40,6 +44,7 @@ public class PreviousJournalActivity extends AppCompatActivity {
     JournalAdapter journalAdapter;
     TextView t1;
     ArrayList<String> id = new ArrayList<String>();
+    int count=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,9 @@ public class PreviousJournalActivity extends AppCompatActivity {
         t1 = findViewById(R.id.textView2);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        WriteBatch batch = db.batch();
+        DocumentReference journalCountRef = db.collection("student-details").document("21BCE8083");
+
 
         RecyclerView journalHistory = findViewById(R.id.journalHistory);
 
@@ -61,6 +69,12 @@ public class PreviousJournalActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                batch.commit().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(PreviousJournalActivity.this, "Journal count updated", Toast.LENGTH_SHORT).show();
+                    }
+                });
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
@@ -93,7 +107,10 @@ public class PreviousJournalActivity extends AppCompatActivity {
                                             journalAdapter.notifyDataSetChanged();
                                             id.add(d.getId());
                                         }
+                                        count += 1;
                                     }
+                                    batch.update(journalCountRef, "num-journal", String.valueOf(count));
+
                                 } else {
 
                                     Toast.makeText(PreviousJournalActivity.this, "No data found in Database", Toast.LENGTH_SHORT).show();
@@ -109,6 +126,7 @@ public class PreviousJournalActivity extends AppCompatActivity {
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
+
 
 
     }
