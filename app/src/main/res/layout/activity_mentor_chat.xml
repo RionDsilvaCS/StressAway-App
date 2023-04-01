@@ -92,4 +92,13 @@
             app:srcCompat="@drawable/send_chat_icon" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Will be added soon"
+        android:textSize="24sp"
+        android:fontFamily="@font/raleway"/>
 </RelativeLayout>

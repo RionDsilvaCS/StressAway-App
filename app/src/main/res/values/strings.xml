@@ -2,7 +2,7 @@
     <string name="app_name">StressAway</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="why_stressaway">StressAway is a product that enhances the mood of a person by recommending stress relief ways based on the journal written by the person. The product analyzes the journal , understands the mood of a person and recommends different kinds of music , movies, books, exercises, food and also the places around the user’s location that boosts his/her mood.</string>
-    <string name="our_aim">To get into all universities to help students to balance their mental health.</string>
+    <string name="why_stressaway">StressAway is a product that enhances the mood of a person by recommending stress relief ways based on the journal written by the person. The product analyzes the journal , understands the mood of a person and recommends music , movies, books, exercises, diet and also the places around the user’s location that boosts his/her mood.</string>
+    <string name="our_aim"><i>" To help all students maintain Good Mental Health. "</i></string>
     <string name="previous_journal"><u>Previous Journal</u></string>
 </resources>
