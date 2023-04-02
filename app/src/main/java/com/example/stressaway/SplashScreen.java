@@ -19,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Handler handlerTimer = new Handler();
         setContentView(R.layout.activity_splash_screen);
-        Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+        Intent intent = new Intent(SplashScreen.this, WelcomeActivity.class);
         logo = findViewById(R.id.logo);
 
         Animation fadeIn = new AlphaAnimation(0, 1);
