@@ -37,7 +37,6 @@ public class SplashScreen extends AppCompatActivity {
         animation.addAnimation(fadeOut);
         logo.setAnimation(animation);
 
-
         handlerTimer.postDelayed(new Runnable(){
             public void run() {
                 startActivity(intent);
