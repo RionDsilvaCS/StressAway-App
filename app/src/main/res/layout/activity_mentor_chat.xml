@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/green_back_1">
+        android:background="#3499A3">
 
 
         <ImageView
@@ -45,7 +45,7 @@
             android:fontFamily="@font/raleway_bold"
             android:gravity="center_vertical"
             android:text="Dr. Vivek Kumar"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20dp" />
     </RelativeLayout>
 
@@ -72,7 +72,7 @@
             android:ems="10"
             android:fontFamily="@font/raleway"
             android:hint="Type here"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:gravity="center_vertical"
             android:inputType="textPersonName"
             android:paddingStart="20dp"

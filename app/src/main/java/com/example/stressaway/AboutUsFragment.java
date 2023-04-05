@@ -50,7 +50,7 @@ public class AboutUsFragment extends Fragment {
         website.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uriUrl = Uri.parse("https://puneethx.github.io/hackathonGDSE.github.io/");
+                Uri uriUrl = Uri.parse("https://stress-away-web-app.vercel.app/");
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);
             }

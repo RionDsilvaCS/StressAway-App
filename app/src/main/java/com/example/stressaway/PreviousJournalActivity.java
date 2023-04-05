@@ -64,7 +64,7 @@ public class PreviousJournalActivity extends AppCompatActivity {
         RecyclerView journalHistory = findViewById(R.id.journalHistory);
 
         JournalCardArrayList = new ArrayList<JournalCard>();
-        JournalCardArrayList.add(new JournalCard("Hello good morning", "15 March", "Trial"));
+        JournalCardArrayList.add(new JournalCard("Hello buddy", "21bce8083", "Trial"));
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +89,7 @@ public class PreviousJournalActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
 
-                db.collection("journal").get()
+                db.collection("21bce8083").get()
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 
                             @SuppressLint("NotifyDataSetChanged")

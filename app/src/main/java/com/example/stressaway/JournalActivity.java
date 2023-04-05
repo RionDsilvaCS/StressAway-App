@@ -9,10 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +19,9 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +38,8 @@ public class JournalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal);
 
+        Date currentTime = Calendar.getInstance().getTime();
+
         previewJournal = findViewById(R.id.previous_journal);
         back_button = findViewById(R.id.back_button);
         save = findViewById(R.id.save_journal_button);
@@ -52,18 +55,28 @@ public class JournalActivity extends AppCompatActivity {
 
                 if(content.matches("")){
                     Toast.makeText(getApplicationContext(),"Are you not in the mood of writing", Toast.LENGTH_SHORT).show();
-                }else{
-                    String date = "24 March";
+
+                }
+                else{
+
+                    String date = String.valueOf(currentTime);
+//                    date  = date.replaceAll("\\s", "");
+                    date  = date.substring(0, Math.min(date.length(), 10));
+                    String docRef = "21bce8083" + date;
+
                     Map<String, Object> data = new HashMap<>();
                     data.put("content", content);
                     data.put("date", date);
+                    data.put("feel", "analyzing...");
+
                     Toast toast = Toast.makeText(getApplicationContext(), "Good Job", Toast.LENGTH_SHORT);
-                    db.collection("journal")
-                            .add(data)
-                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+
+                    db.collection("21bce8083").document(docRef)
+                            .set(data)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
-                                public void onSuccess(DocumentReference documentReference) {
-                                    Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.getId());
+                                public void onSuccess(Void aVoid) {
+                                    Log.d(TAG, "DocumentSnapshot successfully written!");
                                     toast.show();
                                 }
                             })

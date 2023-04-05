@@ -16,14 +16,14 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/home_block_1"
+        android:background="@drawable/home_block_4"
         android:elevation="8dp"
         android:ems="10"
         android:fontFamily="@font/raleway"
         android:gravity="top"
         android:hint="Type here"
         android:padding="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18dp"
         android:inputType="textMultiLine" />
 
@@ -59,7 +59,7 @@
         android:layout_marginTop="36dp"
         android:fontFamily="@font/raleway_bold"
         android:text="@string/previous_journal"
-        android:textColor="#63CCAB"
+        android:textColor="#287687"
         android:textSize="24dp"
         />
 

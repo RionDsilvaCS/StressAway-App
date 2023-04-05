@@ -156,6 +156,8 @@
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/aniesh_image"
                 android:fontFamily="@font/raleway_bold"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"
                 android:text="Linkedin"
                 android:textAllCaps="false"
                 />
@@ -170,7 +172,10 @@
                 android:layout_toEndOf="@+id/linkedin_button1"
                 android:fontFamily="@font/raleway_bold"
                 android:text="GitHub"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"
+                />
 
         </RelativeLayout>
         <RelativeLayout
@@ -231,6 +236,8 @@
                 android:fontFamily="@font/raleway_bold"
                 android:text="Linkedin"
                 android:textAllCaps="false"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"
                 />
 
             <Button
@@ -243,7 +250,10 @@
                 android:layout_toEndOf="@+id/linkedin_button2"
                 android:fontFamily="@font/raleway_bold"
                 android:text="GitHub"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"
+                />
 
         </RelativeLayout>
         <RelativeLayout
@@ -304,6 +314,8 @@
                 android:fontFamily="@font/raleway_bold"
                 android:text="Linkedin"
                 android:textAllCaps="false"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"
                 />
 
             <Button
@@ -316,7 +328,9 @@
                 android:layout_toEndOf="@+id/linkedin_button3"
                 android:fontFamily="@font/raleway_bold"
                 android:text="GitHub"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:backgroundTint="#3499A3"
+                android:textColor="@color/white"/>
 
         </RelativeLayout>
         <TextView
