@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -46,12 +48,19 @@ public class JournalActivity extends AppCompatActivity {
         contentBox = findViewById(R.id.journal_text);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String content = contentBox.getText().toString();
+                String email = user.getEmail();
+                int mailLength = email.length();
+                int regNoIndex = mailLength - 28;
+                String regNo = email.substring(regNoIndex, regNoIndex+9);
+                int nameCount = mailLength - 29;
+                String name = email.substring(0,nameCount);
 
                 if(content.matches("")){
                     Toast.makeText(getApplicationContext(),"Are you not in the mood of writing", Toast.LENGTH_SHORT).show();
@@ -60,18 +69,18 @@ public class JournalActivity extends AppCompatActivity {
                 else{
 
                     String date = String.valueOf(currentTime);
-//                    date  = date.replaceAll("\\s", "");
+
                     date  = date.substring(0, Math.min(date.length(), 10));
-                    String docRef = "21bce8083" + date;
+                    String docRef = regNo + date;
 
                     Map<String, Object> data = new HashMap<>();
                     data.put("content", content);
                     data.put("date", date);
                     data.put("feel", "analyzing...");
 
-                    Toast toast = Toast.makeText(getApplicationContext(), "Good Job", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Good Job " + name, Toast.LENGTH_SHORT);
 
-                    db.collection("21bce8083").document(docRef)
+                    db.collection(regNo).document(docRef)
                             .set(data)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

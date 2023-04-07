@@ -14,13 +14,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeFragment extends Fragment {
 
     ImageView journal, books, music, movie, diet, yoga, location;
+    TextView name;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     public HomeFragment() {
         super(R.layout.fragment_home);
@@ -45,6 +49,15 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        name = view.findViewById(R.id.mainName);
+
+        String email = user.getEmail();
+        int m = email.length();
+        int n = m - 29;
+        String check = email.substring(0,n);
+        check = "Hi " + check;
+        name.setText(check);
+
         journal = view.findViewById(R.id.journalButton);
         books = view.findViewById(R.id.bookButton);
         music = view.findViewById(R.id.musicButton);

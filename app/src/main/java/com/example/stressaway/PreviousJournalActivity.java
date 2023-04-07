@@ -22,6 +22,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -57,9 +59,9 @@ public class PreviousJournalActivity extends AppCompatActivity {
         t1 = findViewById(R.id.textView2);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         WriteBatch batch = db.batch();
         DocumentReference journalCountRef = db.collection("student-details").document("21BCE8083");
-
 
         RecyclerView journalHistory = findViewById(R.id.journalHistory);
 
@@ -89,7 +91,12 @@ public class PreviousJournalActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
 
-                db.collection("21bce8083").get()
+                String email = user.getEmail();
+                int mailLength = email.length();
+                int regNoIndex = mailLength - 28;
+                String check = email.substring(regNoIndex,regNoIndex+9);
+
+                db.collection(check).get()
                         .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
 
                             @SuppressLint("NotifyDataSetChanged")

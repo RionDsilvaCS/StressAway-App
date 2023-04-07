@@ -40,7 +40,7 @@ public class SignUpActivity<EmailPasswordActivity> extends AppCompatActivity {
                 String email = emailBox.getText().toString();
                 String password = passwordBox.getText().toString();
                 String check = email.substring(email.lastIndexOf('@') + 1);
-                Toast.makeText(getApplicationContext(),check,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),check,Toast.LENGTH_SHORT).show();
 
                 if(check.equals("vitapstudent.ac.in")  && password.length() >= 8){
                     mAuth.createUserWithEmailAndPassword(email, password)
@@ -48,7 +48,7 @@ public class SignUpActivity<EmailPasswordActivity> extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        FirebaseUser user = mAuth.getCurrentUser();
+//                                        FirebaseUser user = mAuth.getCurrentUser();
                                         Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
                                         startActivity(intent);
                                     } else {
