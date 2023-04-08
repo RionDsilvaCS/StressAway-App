@@ -78,8 +78,8 @@ public class HomeFragment extends Fragment {
         books.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // books intent
-                addSoonToast.show();
+                Intent intent = new Intent(getActivity(), BookActivity.class);
+                startActivity(intent);
             }
         });
 
