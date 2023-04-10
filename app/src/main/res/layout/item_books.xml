@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/book_card">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/book_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,10 +20,10 @@
         android:textSize="18dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/author_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
+        android:layout_below="@+id/book_name"
         android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/book_img"
@@ -46,7 +47,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
+        android:layout_below="@+id/author_name"
         android:layout_marginStart="128dp"
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/book_img"
